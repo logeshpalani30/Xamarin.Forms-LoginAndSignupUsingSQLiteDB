@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DesignTask2.Views.UsersListPage"
+             Title="Home Page">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout"  Priority="1" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <AbsoluteLayout Margin="3,3,3,3">
+            <ScrollView>
+            <FlexLayout IsVisible="True" JustifyContent="SpaceEvenly" Direction="Column" AlignItems="Start" >
+                        
+                        <ListView x:Name="listUser"
+                                  HasUnevenRows="True"
+                                  IsVisible="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Margin="2,2,2,2">
+                                    <Label Text="{Binding userName}" FontAttributes="Bold" TextColor="Black" FontSize="16"/>
+                                    <Label Text="{Binding name}" FontSize="12"/>
+                                    <Label Text="{Binding phone}" FontSize="12"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>                       
+                    </ListView>             
+            </FlexLayout>
+            </ScrollView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

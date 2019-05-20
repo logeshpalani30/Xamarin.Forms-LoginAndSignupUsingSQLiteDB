@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DesignTask2"
+             x:Class="DesignTask2.MainPage"
+             Title="Hakuna Matata Solutions"
+             x:Name="musicPage"  BackgroundColor="Transparent" NavigationPage.HasBackButton="False"
+             >
+    <!--BackgroundImage="{local:ImageResource FlexLayoutDemos.Images.Banana.jpg} #ff6600-Orange"#6495ED-Blue-->
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <FlexLayout IsVisible="True" JustifyContent="SpaceEvenly" Direction="Column" AlignItems="Center" Margin="30,0,30,0" >
+                <Image Source="hakuna.png" HeightRequest="140" WidthRequest="140" FlexLayout.AlignSelf="Center" BackgroundColor="Transparent" />
+                <Button x:Name="logIn" FontSize="Medium" BorderColor="Black" FlexLayout.AlignSelf="Stretch" CornerRadius="5"  Clicked="LoginButton_Clicked" HorizontalOptions="CenterAndExpand" Text="Login" TextColor="White" BackgroundColor="#3399ff"/>
+                <Label Text="or" FontSize="15" TextColor="DarkGray" BackgroundColor="Transparent" FlexLayout.AlignSelf="Center"/>
+                <Button x:Name="signUp" FontSize="Medium" TextColor="White" BorderColor="Black" BackgroundColor="#00b33c"  CornerRadius="5" FlexLayout.AlignSelf="Stretch"  Clicked="SignUp_Clicked" HorizontalOptions="CenterAndExpand" Text="Sign Up"/>
+                <Label Text=""/>
+            </FlexLayout>   
+            <!--<StackLayout x:Name="loginStackLayout" IsVisible="False">                
+            </StackLayout>-->
+            <!--<ContentView BackgroundColor="Azure" HeightRequest="300" WidthRequest="400" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" >
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <FlexLayout  JustifyContent="Center" Direction="Column" Padding="10,10,10,10" >
+                    <Entry Placeholder="Enter Your Name"/>
+                    <Entry Placeholder="Enter your Password"/>
+                    <Entry Placeholder="Enter Confirm Password"/>
+                    <Button Text="Register"/>
+                </FlexLayout>
+             </StackLayout>
+            </ContentView>-->
+        </AbsoluteLayout>
+        
+    </ContentPage.Content>  
+
+</ContentPage>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DesignTask2.Views.LoginPage" x:Name="loginPage" Title="Hakuna Login" NavigationPage.HasBackButton="True" NavigationPage.HasNavigationBar="True" >
+    <ContentPage.Content>
+        
+        <ScrollView>
+        <AbsoluteLayout x:Name="absLayout" Margin="5,0" IsVisible="True">
+            <FlexLayout IsVisible="True" JustifyContent="SpaceEvenly" Direction="Column" AlignItems="Center" Margin="30,0,30,0" >
+                <Image Source="hakuna.png" HeightRequest="140" WidthRequest="140" FlexLayout.AlignSelf="Center" BackgroundColor="Transparent" />
+                <Label TextColor="Black" FontAttributes="Bold" Text="LOGIN" FlexLayout.AlignSelf="Center" FontSize="20"/>
+                <Entry x:Name="userNameEntry" ReturnType="Next" Placeholder="Email ID" FontSize="Medium" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"  TextColor="Black" />
+                <Entry x:Name="passwordEntry" ReturnType="Done" IsPassword="True" Placeholder="Password" FontSize="Medium" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"  TextColor="Black" />                
+                <Button x:Name="signUp" Clicked="LoginValidation_ButtonClicked" FontSize="Medium" TextColor="White" BorderColor="Black" BackgroundColor="#00b33c"  CornerRadius="5" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand" Text="LOg in"/>
+                <Label x:Name="forgetLabel" Text="Forget Password?" TextColor="Blue" FontSize="15" BackgroundColor="Transparent" FlexLayout.AlignSelf="End"/>
+                <!--<Label Text="Sign Up" FontSize="13" FlexLayout.AlignSelf="End" HorizontalOptions="EndAndExpand"/>-->
+            </FlexLayout>
+                <ContentView x:Name="popupLoadingView" BackgroundColor="#C0808080" Padding="0, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                        <StackLayout x:Name="stackIncrese1" Orientation="Vertical" HeightRequest="150" WidthRequest="300" BackgroundColor="White">
+                            <Label x:Name="labelenter" Text="Enter User Mail id" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"></Label>
+                            <Entry x:Name="useridValidationEntry" Keyboard="Email" IsPassword="True" Placeholder="Enter User id Here" TextColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ></Entry>
+                                                 
+                            <Button x:Name="UpdateButton" Clicked="userIdCheckEvent" BackgroundColor="#ff6600-" Text="Check" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ContentView>
+                <ContentView x:Name="passwordView" BackgroundColor="#C0808080" Padding="0, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                        <StackLayout x:Name="stackIncrese" Orientation="Vertical" HeightRequest="180" WidthRequest="300" BackgroundColor="White">
+                            <Label x:Name="passwordLabel" Text="Password" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"></Label>
+                            <Entry x:Name="firstPassword"  ReturnType="Next" Keyboard="Email" IsPassword="True" Placeholder="Enter User id Here" TextColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ></Entry>
+                            <Entry x:Name="secondPassword" ReturnType="Done" Keyboard="Email" IsPassword="True" Placeholder="Enter User id Here" TextColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ></Entry>
+                            <Label x:Name="warningLabel" Text="" IsVisible="False" TextColor="Blue" FontSize="15" BackgroundColor="Transparent" />
+                            <Button x:Name="submitButton"  Clicked="Password_ClickedEvent" BackgroundColor="#ff6600-" Text="Update" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ContentView>
+            </AbsoluteLayout>
+          </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>
